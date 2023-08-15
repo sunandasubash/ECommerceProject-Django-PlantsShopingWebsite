@@ -1,0 +1,27 @@
+
+
+<footer class="footer navbar-fixed-bottom ">
+    <div class="container">
+      <div class="row mx-auto">
+        <div class="col-6"><h6>About Us</h6>
+          <p>Our mission resonates with creating profound bonds between humanity and the botanical realm, enriching both your surroundings and your spirit. Immerse yourself in the beauty and serenity that our curated selection brings, and start a journey of flourishing alongside nature. Your path to a vibrant and tranquil world begins here at Green-Earth.</p>
+        </div>
+        <div class="col" ><h6>Quick Links</h6>
+           <ul> {% for cat in links %}
+            <li><a href="{{cat.get_url}}">{{cat.name}}</a></li>
+               {% endfor %}
+           </ul>
+        </div>
+         <div class="col" ><h6>Newsletter</h6>
+           <p>Subscribe to our Newsletter to get the latest updates on new products and offers!</p>
+           <input type="text" placeholder="Your mail">
+           <input type="submit">
+         </div>
+        </div>
+      </div>
+      <div class="footer navbar-fixed-bottom  custom_footer" >
+  <p>
+    &copy; Green-Earth All right reserved .
+  </p>
+</div>
+</footer>

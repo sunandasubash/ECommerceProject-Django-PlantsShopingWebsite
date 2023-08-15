@@ -1,0 +1,89 @@
+body{
+font-family: 'Roboto Mono', monospace;
+background-color:rgb(208, 248, 204 );
+}
+/*** navbar ***/
+.nav-item{
+    letter-spacing:0.2em;
+    font-size:15px;
+    text-transform: uppercase;
+}
+.dropdown-item {
+    letter-spacing:0.2em;
+    font-size:15px;
+    text-transform: uppercase;
+}
+.custom_icon{
+    padding-top:10px;
+}
+.banner_img {
+    width:100%;
+    height:500px;
+}
+
+/*** category ***/
+.product_row{
+    padding-top:15px;
+}
+.product_row . mx-auto{
+    font-size:12px;
+    color:#000;
+}
+.category_img{
+    height:400px;
+    width:100%;
+}
+.custom_title{
+    letter-spacing:0.2em;
+    text-transform: uppercase;
+}
+.category_img_padding{
+    padding:5px;
+}
+.custom_margin{
+    padding-top:15px;
+    padding-bottom:15px;
+
+}
+.card-body h3{
+     letter-spacing:0.2em;
+    font-size:15px;
+    text-transform: uppercase;
+
+}
+.custom_product{
+    padding-top:15px;
+    padding-bottom:20px;
+}
+.custom_product .mx-auto{
+    font-size:20px;
+    text-decoration:none;
+    color:black;
+}
+.custom_search_txt{
+    padding-top:20px;
+}
+/*** cart ***/
+.custom_a{
+margin-top:10px;
+}
+.custom_icon{
+padding-top:10px;
+color:orange;
+font-size:15px;
+}
+/*** footer ***/
+.footer{
+	display: block;
+	position: relative;
+	padding-top: 136px;
+	height:auto;
+	width:100%;
+}
+.footer p{
+    font-size:12px;
+    color:rgb(140, 143, 141);
+}
+.custom_footer p{
+    color:black;
+}

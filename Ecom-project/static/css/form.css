@@ -1,0 +1,19 @@
+body{}
+h2{margin-top:30px; text-align: center;color: rgba(7, 21, 50, 0.831);}
+.container{
+    display: flex;
+    justify-content: center;
+    width:300px;
+    height: 420px;
+    padding-top:25px;
+    background-color:#F65252;
+    color: rgb(256,256,256);
+    border-radius: 10px;
+    margin-top: 5%;
+    align-items: center;
+    }
+div{padding:10px 5px 10px 5px;}
+.but{display: flex;justify-content: space-evenly;}
+.button{border-radius: 5px;}
+.button:hover{background-color: rgb(222, 150, 150);}
+a{color: white;}

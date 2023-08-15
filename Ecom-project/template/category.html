@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+    {% if category %}
+        {{ category.description | truncatewords:155 }}
+    {% else %}
+        Welcome to creative Technology
+    {% endif %}
+{% endblock %}
+
+
+{% block title %}
+    {% if category %}
+        {{ category.name }}-Green-Earth
+    {% else %}
+            Green-Earth Shop
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% if category %}
+            <div class="row product_row">
+                <div class="mx-auto">
+                    <p>
+                        <a href="{% url 'shop:allProdCat' %}">Go back</a>
+                    </p>
+                </div>
+            </div>
+    {% endif %}
+    <div class="mx-auto">
+        {% if category %}
+            <img class="category_img" src="{{ category.image.url }}" alt="{{category.name}}">
+    </div>
+    <br>
+    <div>
+        <h1 class="text-center custom_title">{{category.name}}</h1>
+        <p class="text-justify">{{category.description}}</p>
+    </div>
+        {% else %}
+<!--carousel-->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+          {% for category in categories %}
+      <div class="carousel-item {% if forloop.first %} active {% endif %}">
+               <img src="{{ category.image.url }}" class="banner_img category_img_padding" alt="{{ category.name }}">
+      </div>
+
+        {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!--    <div>-->
+<!--        <img class="category_img  category_img_padding" src="{% static 'img/banner.png' %}" alt="our products" width="100%; height:500px;">-->
+<!--    </div>-->
+    <br>
+    <div>
+        <h3 class="text-center custom_title ">Our products</h3>
+        <p class="text-justify" >
+            Welcome to Green-Earth's Product Collection! Here, amidst the verdant embrace of our plant haven,
+            we proudly present a handpicked assortment that celebrates the magnificence of nature.
+            As dedicated cultivators and nurturers, we offer a wide array of plants at our online shop – from exquisite indoor foliage that breathes life into your interiors,
+            to the captivating outdoor blossoms that adorn your outdoor spaces. Whether you're a seasoned horticulturist or a budding enthusiast,
+            Green-Earth has the perfect match for you. Our mission resonates with creating profound bonds between humanity and the botanical realm,
+            enriching both your surroundings and your spirit. Immerse yourself in the beauty and serenity that our curated selection brings,
+            and start a journey of flourishing alongside nature. Your path to a vibrant and tranquil world begins here at Green-Earth.
+        </p>
+    </div>
+        {% endif %}
+<div class="container" >
+    <div class="row mx-auto">
+        {% for product in products.object_list %}
+            <div class="custom_margin col-9 col-sm-6 col-md-4 col-lg-3">
+                <div class="card text-center" style="min-width: 18rem;height:350px;">
+                    <a href="{{product.get_url}}"><img class=" card-img-top" src="{{ product.image.url }}" alt="{{product.name}}" style="height:180px;"></a>
+                        <div class="card-body d-flex flex-column">
+                            <h3>{{product.name}}</h3>
+                            <p>₹{{product.price}}</p>
+                             {% if product.stock <= 0 %} <!-- add cart button -->
+                            <p><b>Out of stock </b></p>
+                            {% endif %}
+                                <div class="mt-auto">
+                                    {% if product.stock > 0 %}
+                                    <a href="{% url 'cart:add_cart' product.id%}" class="btn" style="background-color:#66FF66">Add to cart</a>
+                                    {% endif %}
+                                </div>
+                        </div>
+                </div>
+            </div>
+             {% endfor %}
+    </div>
+
+        <div class="mx-auto">
+            {% if products.paginator.num_pages > 1 %}
+                <hr>
+                <div class="text-center">
+                    {% for pg in products.paginator.page_range %}
+                        <a href="?page={{pg}}" class="btn btn-sm btn-light {% if products.number == pg %} active {% endif %}">{{pg}}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        <br></div>
+
+{% endblock %}
+
+
