@@ -19,8 +19,8 @@
 
 #product category page
 
+![nursery2](https://github.com/sunandasubash/ECommerceProject-Django-PlantsShopingWebsite/assets/48945854/a3a5104a-b86b-4038-8dec-840671f18c3b)
 
-![nursery3](https://github.com/sunandasubash/ECommerceProject-Django-PlantsShopingWebsite/assets/48945854/077ec241-a26d-42f6-81d4-25e968ff8c4b)
 
 #view product
 
