@@ -14,15 +14,8 @@
   
 #OUTPUT preview 
 
+![nursery](https://github.com/sunandasubash/ECommerceProject-Django-PlantsShopingWebsite/assets/48945854/88bbeef1-711c-4807-8d7b-40d7ed2c61fb)
 
-
-![nursery1](https://github.com/sunandasubash/ECommerceProject-Django-PlantsShopingWebsite/assets/48945854/e2375d5c-e0f4-4e3a-a9b1-4e88ce55b4e9)
-
-
-![nursery7](https://github.com/sunandasubash/ECommerceProject-Django-PlantsShopingWebsite/assets/48945854/6b4c7f88-d567-4fab-b49d-1c4bdd18e479)
-
-
-![nursery2](https://github.com/sunandasubash/ECommerceProject-Django-PlantsShopingWebsite/assets/48945854/c8fb9e7a-5e97-4656-9ecb-46210500b709)
 
 #product category page
 
